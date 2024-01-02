@@ -32,5 +32,5 @@ export function Header({dark_mode_color, dark_mode_icon, handle_dark_mode, light
           style={{ backgroundColor: dark_mode_color }} // Override the dark-mode class
         />
     </Flex>
-        )
+    )
 }
