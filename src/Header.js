@@ -1,7 +1,12 @@
 import React from "react";
 
-import {Button, Spacer, Heading, Box, Flex, IconButton} from "@chakra-ui/react"
-import {EmailIcon} from "@chakra-ui/icons"
+import {ContactModal} from "./ContactPopUp.js"
+
+import { Link as ReactRouterLink } from "react-router-dom"
+import { Link as ChakraLink} from "@chakra-ui/react"
+
+import {Spacer, Heading, Box, Flex, IconButton} from "@chakra-ui/react"
+
 
 export function Header({dark_mode_color, dark_mode_icon, handle_dark_mode, light_mode_header}) {
     return(
@@ -11,16 +16,16 @@ export function Header({dark_mode_color, dark_mode_icon, handle_dark_mode, light
         </Box>
         <Spacer />
         <Box p="2">
-          <Heading size="md">HOME</Heading>
+          <Heading size="md"><ChakraLink as={ReactRouterLink} to="/Personal-Website" _hover={{ color: 'teal' }}>HOME</ChakraLink></Heading>
         </Box>
         <Box p="2">
-          <Heading size="md">PROJECTS</Heading>
+          <Heading size="md"><ChakraLink as={ReactRouterLink} to="/Projects" _hover={{ color: 'teal' }}>PROJECTS</ChakraLink></Heading>
         </Box>
         <Box p="2">
-          <Heading size="md">ABOUT</Heading>
+          <Heading size="md"><ChakraLink as={ReactRouterLink} to="/About" _hover={{ color: 'teal' }}>ABOUT</ChakraLink></Heading>
         </Box>
         <Spacer />
-        <Button colorScheme="teal" leftIcon={<EmailIcon/>} size="lg" align="baseline"><Heading size="md">Contact</Heading></Button>
+        <ContactModal/> {/* See ContactPopUp.js */}
         <IconButton 
           size="lg"
           colorScheme={dark_mode_color}

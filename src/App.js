@@ -1,6 +1,5 @@
 import './App.css';
 import { React, useState } from 'react';
-import {Route, Routes} from 'react-router-dom';
 
 import {Header} from "./Header.js";
 
@@ -25,8 +24,8 @@ function handle_dark_mode() {
       {/*Below is the main content for the home page*/}
       <Box minH="100vh" className={dark_mode_main}>
         <VStack align="start" pt="8" ml="8">
-          <Heading size="2xl">Hi there!</Heading>
-          <Text fontSize="xl">Test</Text>
+          <Heading size="2xl">Hi there, thank you for visiting!</Heading>
+          <Text fontSize="xl">While this website is still a work in progress, you can contact me via the contact button if needed.</Text>
         </VStack>
       </Box>
     </ChakraProvider>
